@@ -3,9 +3,11 @@
 import rospy
 from std_srvs.srv import Empty,EmptyResponse
 
+#check
 def empty_response_cb(req):
     print("Just a service!")
     return EmptyResponse
+
 
 def service_node():
     rospy.init_node("empty_server_service")
