@@ -9,6 +9,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 )
 
+find_package(Boost REQUIRED COMPONENTS system)
+
 
 
 ## Generate services in the 'srv' folder
@@ -16,25 +18,23 @@ add_service_files(
 
   FILES
   addition.srv
+  velocity.srv
   
 )
 
 
-generate message(
+generate_messages(
   DEPENDENCIES
   std_msgs
 )
 
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES ros1_python_concepts
-#  CATKIN_DEPENDS rospy
-#  DEPENDS system_lib
-)
+catkin_package()
 
 
 include_directories(
-# include
+
   ${catkin_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIRS}
 )
+
 
