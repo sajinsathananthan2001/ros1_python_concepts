@@ -19,6 +19,8 @@ add_service_files(
   FILES
   addition.srv
   velocity.srv
+  practice.srv
+  
   
 )
 
